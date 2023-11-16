@@ -1,0 +1,64 @@
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<header id="header">
+	<div id="header-wrap">
+
+		<nav class="primary-nav padding-small">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-lg-2 col-md-2">
+						<div class="main-logo">
+							<a th:href="@{/}" th:title="#{home}">
+								<img src="images/main-logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-10 col-md-10">
+						<div class="navbar">
+
+							<div id="main-nav" class="stellarnav d-flex justify-content-end right">
+								<ul class="menu-list">
+
+									<li>
+										<a th:href="@{/}" th:classappend="${requestURI == '/index.html' ? 'item-anchor active' : 'item-anchor'}" data-effect="Home">Home</a>
+									</li>
+
+									<li>
+										<a th:href="@{/about}" th:classappend="${requestURI == '/about.html' ? 'item-anchor active' : 'item-anchor'}" data-effect="About">About</a>
+									</li>
+
+									<li>
+										<a th:href="@{/shop}" th:classappend="${requestURI == '/shop.html' ? 'item-anchor active' : 'item-anchor'}" data-effect="Shop">Shop</a>
+									</li>
+
+									<li class="menu-item has-sub">
+										<a href="#" class="item-anchor d-flex align-item-center" data-effect="Pages">Pages<i class="icon icon-chevron-down"></i></a>
+										<ul class="submenu">
+											<li>
+												<a th:href="@{/styles}" th:classappend="${requestURI == '/styles.html' ? 'item-anchor active' : 'item-anchor'}">Styles</a>
+											</li>
+											<li>
+												<a th:href="@{/thankYou}" th:classappend="${requestURI == '/thank-you.html' ? 'item-anchor active' : 'item-anchor'}">Thankyou</a>
+											</li>
+										</ul>
+									</li>
+
+
+									<li>
+										<a th:href="@{/blog}" th:classappend="${requestURI == '/blog.html' ? 'item-anchor active' : 'item-anchor'}">Blog</a>
+									</li>
+
+									<li>
+										<a th:href="@{/contact}" th:classappend="${requestURI == '/contact.html' ? 'item-anchor active' : 'item-anchor'}" data-effect="Contact">Contact</a>
+									</li>
+
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
